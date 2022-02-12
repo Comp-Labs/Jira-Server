@@ -2,7 +2,7 @@
   "name": "jira-server",
   "productName": "Jira Server",
   "version": "1.0.0",
-  "description": "Enter your Jira Server URL and boost your productivity.",
+  "description": "Enter your Jira Server URL, and Open your Jira Server browser in a click and boost your productivity.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
