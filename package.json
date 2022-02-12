@@ -1,0 +1,30 @@
+{
+  "name": "jira-server",
+  "productName": "Jira Server",
+  "version": "1.0.0",
+  "description": "Enter your Jira Server URL and boost your productivity.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Jira",
+    "Server",
+    "Productivity",
+    "App"
+  ],
+  "author": "Comp Labs",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.2"
+  },
+  "build": {
+    "appId": "com.complabs.GoogleDocs",
+    "windows": {
+      "category": "com.complabs.GoogleDocs.category.productivity"
+    },
+    "linux": {
+      "category": "com.complabs.GoogleDocs.category.productivity"
+    }
+  }
+}
