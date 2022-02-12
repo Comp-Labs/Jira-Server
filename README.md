@@ -9,4 +9,4 @@ App Progress:
 Enter your Jira Server URL, and Open your Jira Server browser in a click and boost your productivity
 
 ## License
-MIT License
+[MIT License](LICENSE.md)
