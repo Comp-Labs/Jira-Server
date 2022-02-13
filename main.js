@@ -8,10 +8,11 @@ const win = new BrowserWindow({
   webPreferences: {
       nodeIntegration: true
   },
-  icon: __dirname + '/icon.ico',
+  icon: __dirname + '/favicon2.ico',
 })
 
 // Load the index.html of the app.
+win.webContents.userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0"
 win.loadFile('index.html')
 
 // Open the DevTools.

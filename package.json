@@ -5,7 +5,8 @@
   "description": "Enter your Jira Server URL, and Open your Jira Server browser in a click and boost your productivity.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "keywords": [
     "Jira",
@@ -16,15 +17,74 @@
   "author": "Comp Labs",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^16.0.2"
+    "electron": "^16.0.2",
+    "electron-packager": "^15.4.0",
+    "electron-builder": "^22.3.2"
   },
   "build": {
-    "appId": "com.complabs.GoogleDocs",
-    "windows": {
-      "category": "com.complabs.GoogleDocs.category.productivity"
+    "productName": "Jira Server",
+    "generateUpdatesFilesForAllChannels": true,
+    "mac": {
+      "artifactName": "Jira-Server.${ext}",
+      "target": [
+        {
+          "arch": "universal",
+          "target": "dmg"
+        },
+        {
+          "arch": "universal",
+          "target": "zip"
+        }
+      ],
+      "category": "com.complabs.Jira-Server.category.productivity",
+      "darkModeSupport": true,
+      "hardenedRuntime": true,
+      "asarUnpack": "**/*.node"
     },
     "linux": {
-      "category": "com.complabs.GoogleDocs.category.productivity"
+      "artifactName": "Jira-Server-${arch}.${ext}",
+      "category": "CompLabs;JiraServer;Category;Productivity",
+      "description": "Comp Labs Meet Desktop App",
+      "desktop": {
+        "Comment[hu]": "Asztali Comp Labs Meet-alkalmazás"
+      },
+      "executableName": "Jira-Server",
+      "target": [
+        {
+          "arch": "x64",
+          "target": "snap"
+        },
+        {
+          "arch": "x64",
+          "target": "AppImage"
+        },
+        {
+          "arch": "x64",
+          "target": "deb"
+        }
+      ]
+    },
+    "deb": {
+      "depends": [
+        "libgtk-3-0",
+        "libnss3",
+        "libxtst6",
+        "xdg-utils",
+        "libatspi2.0-0",
+        "libuuid1"
+      ]
+    },
+    "win": {
+      "artifactName": "Jira-Server.${ext}",
+      "target": [
+        {
+          "arch": [
+            "ia32",
+            "x64"
+          ],
+          "target": "nsis"
+        }
+      ]
     }
   }
 }
